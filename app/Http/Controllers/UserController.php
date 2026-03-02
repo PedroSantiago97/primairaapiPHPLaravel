@@ -25,7 +25,7 @@ class UserController extends Controller
 
         return redirect() ->route('user.create')->with('success' , "Usuário cadastrado com sucesso");
         } catch( Exception $e){
-            return back()->witchInput()->with('error' , "Usuário não cadastrado!");
+            return back()->withInput()->with('error' , "Usuário inválido");
         }
     }
 
